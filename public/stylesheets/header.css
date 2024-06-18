@@ -32,7 +32,6 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
 .navbar{
     background: black;
 }
@@ -61,6 +60,9 @@
 }
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show { /* Despues de hacer click en el dropdownmenu */
     color: #F34E3A!important;
+}
+.nav-link{
+    display: flex!important;
 }
 .dropdown{
     display: flex;
@@ -125,6 +127,9 @@
     top: 18px;
     left: -9px;
 }
+.nav-item i{
+    display: none;
+}
 @media (max-width: 990px){
     .inicioHeader{
         display: block;
@@ -155,6 +160,9 @@
     .dropdown{
         display: block;
         align-items: none;
+    }
+    .nav-item i{
+        display: block;
     }
 }
 @media (max-width:625px){ 
