@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <%- include('../partials/head.ejs') %>  
+  </head>
+
+  <header>
+      <%- include('../partials/header.ejs') %>
+  </header>
+  
+  <body>
+ 
+    <br>
+    <h1>BIENVENIDO</h1>
+
+    <div class="padrePerfil">
+      <div class="imagenPefil">
+        <img src="/images/avatars/<%= locals.userLogged.avatar %>" alt="" class="avatarProfile">
+      </div>
+      <div class="infoPerfil">
+        <p><strong>Nombre:</strong> <%= locals.userLogged.nombre %></p>
+        <p><strong>Apellido:</strong> <%= locals.userLogged.apellido %></p>
+        <p><strong>Email:</strong> <%= locals.userLogged.email %></p>
+        <p><strong>Pais:</strong> <%= locals.userLogged.country %></p>
+        <p><strong>Categoria:</strong> <%= locals.userLogged.category %></p>
+      </div>
+    </div>
+
+    <div class="botonesEdicion" style="justify-content: center">
+      <a href="/usuarios/editProfile/<%= userLogged.id %>">
+        <button class="loginButton">EDITAR PERFIL
+          <span class="relleno"></span>
+        </button>
+        
+      </a>
+    </div>
+
+    <br>
+    <br>
+  
+  </body>
+    
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</html>

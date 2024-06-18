@@ -1,0 +1,59 @@
+a{
+    text-decoration: none!important;
+}
+:root{
+    --color-primario: #394054!important;
+    --color-secundario: rgb(0, 176, 240)!important;
+}
+/* Scroll personalizado */
+body::-webkit-scrollbar{
+  width: 11px;
+  background: var(--color-primario);
+}
+body::-webkit-scrollbar-thumb{
+  background: var(--color-secundario);
+  border-radius: 5px;
+}
+body{
+    font-family: "Poppins", sans-serif!important;
+    /* background-color: #212121!important; */
+    margin-top: 65px!important;
+}
+h1{
+    text-align: center;
+    font-family: 'Black Ops One', cursive!important;    
+    font-size: 50px!important;
+    margin: 30px 0 40px 0!important;
+    color: var(--color-secundario)!important;
+}
+h2{
+    text-align: center!important;
+    font-size: 30px!important;
+    font-family: "Poppins"!important;
+    font-weight: bold!important;
+    margin: 30px auto!important;
+    text-shadow: -1px 4px 3px rgba(0,0,0,0.48)!important;
+    color: var(--color-primario)!important;
+}
+h3{
+    margin: 30px 20px !important;
+    font-family: "Poppins"!important;
+    font-size: 20px!important;
+}
+
+@media (max-width:1100px){
+    h1{
+        font-size: 35px!important;
+    }
+    h3{
+        text-align: justify;
+    }
+    body{
+        margin-top: 85px!important;
+    }
+}
+@media (max-width:460px){
+    body{
+        margin-top: 115px!important;
+    }
+}

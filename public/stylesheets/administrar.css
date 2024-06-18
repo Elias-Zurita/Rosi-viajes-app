@@ -1,0 +1,105 @@
+.accesoCrear button{
+    border: none;
+    width: 100%;
+    border-radius:20px;
+    padding: 8px;
+    transition: transform 0.3s ease-in-out; 
+    color: navy;
+}
+.accesoCrear{
+    width: 300px;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius:20px;
+    margin: 50px auto;
+}
+.accesoCrear button:hover{
+    color: var(--color-primario);
+    transform: scale(1.05); 
+}
+.tablaAdministrar{
+    margin: 0 auto
+}
+.tablaAdministrar img{
+    max-height: 150px;
+    max-width: 150px;
+}
+.tablaAdministrar th{
+    text-align: center;
+    font-size:20px
+}
+.tablaAdministrar td{
+    border: rgb(105, 105, 105) solid 2px;
+    padding-left: 10px;
+    font-size:17px;
+}
+.tablaAdministrar tr:hover{
+    background: rgb(178, 178, 178);
+    color: black;
+}
+.tablaAdministrar td i{
+    font-size: 25px;
+    transition: .3s ease-in-out;
+}
+.tablaAdministrar td button{
+    border: none;
+    background: transparent;
+}
+.tablaAdministrar td i:hover{
+    color: rgb(237, 113, 11);
+    transform: scale(1.15);
+}
+.tarjetaProductoListado{
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tarjetaProducto{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 10px 6px rgba(212,212,212,0.44);
+    -moz-box-shadow: 0px 0px 10px 6px rgba(212,212,212,0.44);
+    box-shadow: 0px 0px 10px 6px rgba(212,212,212,0.44);
+    padding: 20px;
+    transition: .3s ease-in-out;
+}
+.tarjetaProducto:hover{
+    background: var(--color-primario);
+    color: white;
+}
+.tarjetaProducto img{
+    height:250px
+}
+.botonesAdministrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botonesAdministrar button{
+    margin: 0 15px;
+    background: black;
+    color: white;
+    padding:8px;
+    border: none;
+    border-radius: 7px;
+}
+@media(max-width:800px){
+    .tablaAdministrar{
+        display:none;
+    }
+    .tarjetaProductoListado{
+        display: block;
+        display: flex;
+    }
+    .accesoCrear{
+        width: 250px;
+        font-size: 20px;
+        margin: 50px auto 0px auto;
+    }
+}

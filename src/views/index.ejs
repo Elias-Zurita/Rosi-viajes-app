@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <%- include('partials/head.ejs') %>  
+  </head>
+
+  <header>
+      <%- include('partials/header.ejs') %>
+  </header>
+  
+  <body>
+
+    <div class="bannerVideoIndex">
+      <video autoplay muted loop src="/images/index/video_banner_desktop.mp4"></video>
+    </div>
+
+    <div class="bannerVideoIndexMobile">
+      <video autoplay muted loop src="/images/index/video_banner_mobile.mp4"></video>
+    </div>
+      
+    <h2 style="background: black; margin: 0px !Important; margin-top:-8px!important; padding-top: 50px; color: white!important; border: none!Important;">NAVEGA POR CATEGORIA</h2>
+
+    <div class="categoriasIndex">
+
+      <div class="categoria">
+        <a href="/productos/bus">
+          <div class="imagenCategoria">
+            <img src="/images/index/cat_enbus.jpg" alt="">
+          </div>
+          <div class="nombreCategoria">
+            Viajes en micro
+          </div>
+        </a>
+      </div>
+      
+      <div class="categoria">
+        <a href="/productos/aereos">
+          <div class="imagenCategoria">
+            <img src="/images/index/cat_aereos.jpg" alt="">
+          </div>
+          <div class="nombreCategoria">
+            Viajes en avión
+          </div>
+        </a>
+      </div>
+
+      <div class="categoria">
+        <a href="/productos/findes">
+          <div class="imagenCategoria">
+            <img src="/images/index/cat_miniturismo.jpg" alt="">
+          </div>
+          <div class="nombreCategoria">
+            Findes largos
+          </div>
+        </a>
+      </div>
+      
+    </div>
+
+   <!-- Flickity HTML init -->
+   <div class="cajaCarouselFlickity" data-flickity='{ "freeScroll": true, "wrapAround": true, "groupCells": true}'>
+    <div class="guitarraCarouselFlickity"><a href="/productos/detalle/6">
+          <div class="imagenGuitarraCarousel">
+              <img src="images/productos/imagen1702052967877.png" alt="" class="imagenAumentada">
+          </div>
+          <div class="nombreGuitarraIndex">Tremonti Series</div>
+      </a></div>
+      <div class="guitarraCarouselFlickity"><a href="/productos/detalle/7">
+          <div class="imagenGuitarraCarousel">
+              <img src="images/productos/imagen1702053168305.png" alt="" class="imagenAumentada">
+          </div>
+          <div class="nombreGuitarraIndex">Petrucci Signature</div>
+      </a></div>
+      <div class="guitarraCarouselFlickity"><a href="/productos/detalle/8">
+          <div class="imagenGuitarraCarousel">
+              <img src="images/productos/imagen1702053417985.png" alt="" class="imagenAumentada">
+          </div>
+          <div class="nombreGuitarraIndex">Van Halen Signature</div>
+      </a></div>
+      <div class="guitarraCarouselFlickity"><a href="/productos/detalle/10">
+          <div class="imagenGuitarraCarousel">
+              <img src="images/productos/imagen1702053853985.png" alt="" class="imagenAumentada">
+          </div>
+          <div class="nombreGuitarraIndex">Hetfield Signature</div>
+      </a></div>
+      <div class="guitarraCarouselFlickity"><a href="/productos/detalle/12">
+          <div class="imagenGuitarraCarousel">
+              <img src="images/productos/imagen1702054229705.png" alt="" class="imagenAumentada">
+          </div>
+          <div class="nombreGuitarraIndex">Steve Vai Signature</div>
+      </a></div>
+      <div class="guitarraCarouselFlickity"><a href="/productos/detalle/17">
+          <div class="imagenGuitarraCarousel">
+              <img src="images/productos/imagen1702055288702.png" alt="" class="imagenAumentada">
+          </div>
+          <div class="nombreGuitarraIndex">Slash Signature</div>
+      </a></div>
+      <div class="guitarraCarouselFlickity"><a href="/productos/detalle/15">
+          <div class="imagenGuitarraCarousel">
+              <img src="images/productos/imagen1702054981786.png" alt="" class="imagenAumentada">
+          </div>
+          <div class="nombreGuitarraIndex">Satriani Signature</div>
+      </a></div>
+      <div class="guitarraCarouselFlickity"><a href="/productos/detalle/13">
+          <div class="imagenGuitarraCarousel">
+              <img src="images/productos/imagen1702054421090.png" alt="" class="imagenAumentada">
+          </div>
+          <div class="nombreGuitarraIndex">Cornell Signature</div>
+      </a></div>
+      <div class="guitarraCarouselFlickity"><a href="/productos/detalle/18">
+          <div class="imagenGuitarraCarousel">
+              <img src="images/productos/imagen1702055441486.png" alt="" class="imagenAumentada">
+          </div>
+          <div class="nombreGuitarraIndex">Mustain Signature</div>
+      </a></div>
+    </div>
+
+    <div class="porQueIndex">
+      <h2>¿Por qué comprar con Rosi Viajes?</h2>
+      <h3 style="text-align:center">Con más de 10 años de experiencia en turismo, brindamos la atención personalizada que buscas, para que tengas un viaje reconfortante y económico.</h3>
+
+      <div class="iconosIndex">
+        <div class="cajaIconoIndex">
+          <div class="face front">
+            <img src="images/index/icono_transporte.png" alt="">
+          </div>
+          <div class="face back">
+            <div class="nombreIconoIndex">Buses semi camas y camas</div>
+          </div>
+        </div>
+        <div class="cajaIconoIndex">
+          <div class="face front">
+            <img src="images/index/icono_avion.png" alt="">
+          </div>
+          <div class="face back">
+            <div class="nombreIconoIndex">Volá dentro y fuera del país</div>
+          </div>
+        </div>
+        <div class="cajaIconoIndex">
+          <div class="face front">
+            <img src="images/index/icono_tarjeta.png" alt="">
+          </div>
+          <div class="face back">
+            <div class="nombreIconoIndex">Efectivo, transferencia o MP</div>
+          </div>
+        </div>
+        <div class="cajaIconoIndex">
+          <div class="face front">
+            <img src="images/index/atencion.png" alt="">
+          </div>
+          <div class="face back">
+            <div class="nombreIconoIndex">Atención personalizada</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bannerMate">
+      <p>Date la oportunidad de soñar</p>
+    </div>
+
+
+    <script src="/javascripts/countdown.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> 
+
+  </body>
+  
+  <footer>
+    <%- include('partials/footer.ejs') %>
+  </footer>
+
+</html>

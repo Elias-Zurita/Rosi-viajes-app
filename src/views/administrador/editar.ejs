@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  
+    <head>
+        <%- include('../partials/head.ejs') %>  
+    </head>
+
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+  
+    <body>
+
+        <br>
+        <h1>EDITAR PRODUCTO</h1>
+
+        <form action="/administrar/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="imagenYEdicion">
+                <div class="imagenEdicion">
+                    <img src="/images/productos/<%= producto.imagen %>">
+                </div>
+                <div class="formularioEdicionProducto">
+                    <div>NOMBRE:</div>
+                    <input type="text" placeholder="NOMBRE NUEVO" name="nombre" value="<%= producto.nombre %>" required>
+                    <div>MODELO:</div>
+                    <input type="text" placeholder="MODELO NUEVO" name="modelo" value="<%= producto.modelo %>" required>
+                    <div>MARCA:</div>
+                    <input type="text" placeholder="MARCA NUEVA" name="marca" value="<%= producto.marca %>" required>
+                    <div>CATEGORIA:</div>
+                    <input type="text" placeholder="CATEGORIA NUEVA" name="categoria" value="<%= producto.categoria %>" required>
+                    <div>PRECIO:</div>
+                    <input type="text" placeholder="PRECIO NUEVO" name="precio" required value="<%= producto.precio %>">
+                    <div>DESCRIPCIÓN:</div>
+                    <input type="text" placeholder="DESCRIPCION NUEVA" name="descripcion" value="<%= producto.descripcion %>" required>
+                    <div>IMAGEN:</div>
+                    <input type="file" placeholder="IMAGEN NUEVA" name="imagen" id="imagen">
+                </div>
+            </div>
+
+            <div class="botonesEdicion">
+                <div>
+                    <button class="loginButton" type="submit">GUARDAR
+                        <span class="relleno"></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="botonesEdicion">
+            <a href="/administrar/productsList">
+                <button class="loginButton">VOLVER
+                    <span class="relleno"></span>
+                </button>
+            </a>
+        </div>
+        
+
+        <br><br>
+        
+    </body>
+  
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</html>
+

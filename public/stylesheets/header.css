@@ -1,0 +1,165 @@
+.inicioHeader{
+    color: white !important;
+    font-family: 'Oleo Script', system-ui;
+    font-size: 25px;
+    margin-top: 13px;
+    display: none;
+}
+
+/* Boton Arriba */
+.back-to-top {
+    position: fixed;
+    right: 60px;
+    bottom: 100px;
+    z-index: 11;
+    cursor: pointer;
+    animation: action 1s infinite alternate;
+    background: crimson!important;
+    border: none!important;
+    transition: .3s ease-in-out!important;
+}
+.back-to-top:hover{
+    background-color: rgb(11, 181, 155)!important;
+    color: black!important;
+    transform: scale(1.2);
+    border-radius: 50%;
+}
+.promoHeader{
+    text-align:center;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar{
+    background: black;
+}
+.navbar a {
+    color: white;
+}
+.navbar-nav{
+    align-items: center;
+}
+.navbar-brand {
+    color: white;
+    font-family: 'Oleo Script', system-ui;
+    font-size: 35px;
+}
+.navbar-brand:hover{
+    color: #F34E3A!important;
+}
+.nav-item {
+    margin-right: 26px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Poppins";
+}
+.nav-item a:hover{
+    color: #F34E3A;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show { /* Despues de hacer click en el dropdownmenu */
+    color: #F34E3A!important;
+}
+.dropdown{
+    display: flex;
+    align-items: center;
+}
+.dropdown-item{
+    color: black!important;
+}
+.dropdown-item:hover{
+    background: #F34E3A!important;
+}
+
+/* Burger menu */
+.navbar-toggler:focus { /* quita el recuadro al hacer click en el burgermenu */
+    outline: none;
+    box-shadow: none!important;
+}
+.navbar-toggler{ 
+    border: none;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s ;
+}
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+.navbar-toggler:focus { /* quita el recuadro al hacer click en el burgermenu */
+    outline: none;
+    box-shadow: none;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { /* distancia lateral burgermenu logo */
+    --bs-gutter-x: 12px;
+}
+.btn-outline-success { /* Boton de busqueda */
+    --bs-btn-color: white!important;
+    --bs-btn-border-color: var(--color-primario)!important;
+}
+#busqueda{
+    width: 280px;
+}
+.changuito{
+    position: relative;
+}
+.badge {
+    padding: 0.5em;
+    font-size: 0.8em;
+    line-height: 1em;
+    vertical-align: middle;
+}
+.changuito span{
+    position: absolute; 
+    top: 18px;
+    left: -9px;
+}
+@media (max-width: 990px){
+    .inicioHeader{
+        display: block;
+    }
+    .navbar-brand {
+        display: none;
+    }
+    .changuito span{
+        left: 18px;
+    }
+}
+@media (max-width: 1000px){
+    .navbar-nav{
+        align-items: normal;
+    }
+    .navbar-nav .dropdown-menu {  /* Dropdown menu cuando es mobile */
+        width: 250px;
+    }
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl { /* Menu negro desplegable en mobile*/
+        padding-bottom: 10px;
+    }
+    #busqueda{
+        width: 250px;
+    }
+    .navbar .container{ /* Desplazamiento burger menu */
+        --bs-gutter-x: 0rem;
+    }
+    .dropdown{
+        display: block;
+        align-items: none;
+    }
+}
+@media (max-width:625px){ 
+    .back-to-top {
+        right: 25px;
+        bottom: 85px;
+    }
+}

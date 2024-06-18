@@ -1,0 +1,42 @@
+[
+ {
+  "id": 1,
+  "nombre": "Elias",
+  "apellido": "Zurita",
+  "email": "elias@dev.com",
+  "password": "$2a$10$biX7h3DYppazYqn7qSn3re7FPQi/iybky4ZNnQ23pVoydFsworHLC",
+  "country": "Argentina",
+  "avatar": "avatar1701704207693.jpg",
+  "category": "admin"
+ },
+ {
+  "id": 2,
+  "category": "Cliente",
+  "nombre": "Pedritopp",
+  "apellido": "Mayer",
+  "email": "pedrito@gmail.com",
+  "password": "$2a$10$zCQRkw3DAmN763mhLl56Eerv0NciMGOd5ZWrs5VmVG9doO/CrmmRi",
+  "country": "",
+  "avatar": "1706269542773_img.jpg"
+ },
+ {
+  "id": 3,
+  "category": "Cliente",
+  "nombre": "eee",
+  "apellido": "Eeee",
+  "email": "pruebamail@gmail.com",
+  "password": "$2a$10$DR2bnpu.aP9m5UzQQMyHwe2bHnDoURMhhwnN2sQF/KoNuXEq07Foa",
+  "country": "",
+  "avatar": "1717677689356_img.jpg"
+ },
+ {
+  "id": 4,
+  "category": "admin",
+  "nombre": "Rosana",
+  "apellido": "Araujo",
+  "email": "rosiviajes@gmail.com",
+  "password": "$2a$10$QiLF5vuqp8Z.xunai9/4CeT32Kq96F0OxhgUJktCBjBF07o7/89iS",
+  "country": "Argentina",
+  "avatar": "1718715282412_img.jpg"
+ }
+]

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  
+    <head>
+        <%- include('../partials/head.ejs') %>  
+    </head>
+
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+  
+    <body>
+
+        <br>
+        <h1>DETALLE DE PRODUCTO</h1>
+        
+        <div class="padreDetalle">
+            <div class="imagenDetalle">
+                <img src="/images/productos/<%= producto.imagen %>">
+            </div>
+            <div class="infoDetalle">
+                <p><strong>NOMBRE:</strong> <%= producto.nombre %></p>
+                <p><strong>MODELO:</strong> <%= producto.modelo %></p>
+                <p><strong>MARCA:</strong> <%= producto.marca %></p>
+                <p><strong>DESCRIPCIÓN:</strong> <%= producto.descripcion %></p>
+            </div>
+            <div class="precioDetalle">
+                <p>$ <%= producto.precio %></p>
+                <p>Precios por Pasajero en pesos</p>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        
+    </body>
+  
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</html>
+

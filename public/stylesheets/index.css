@@ -1,0 +1,254 @@
+.bannerVideoIndex{
+    margin: 0px!important;
+}
+.bannerVideoIndex video{
+    height: 600px;
+    width: 100%;
+    object-fit: cover; /* no achica la imagen, sino que la pasa por arriba */
+    margin-bottom: -7px;
+}
+.bannerVideoIndexMobile{
+    display:none
+}
+.categoriasIndex{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto 70px auto;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.categoria{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin:30px;
+}
+.categoria:hover .nombreCategoria{
+    text-decoration:underline;
+    font-weight: bold;
+}
+.imagenCategoria{
+    width: 300px;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    border: violet solid 2px;
+}
+.imagenCategoria img{
+    width: 100%;
+    border-radius: 10px;
+}
+.categoria:hover .imagenCategoria{
+    transform: scale(1.05);
+}
+.nombreCategoria{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* CAROUSEL flickity */
+.cajaCarouselFlickity{
+    width: 80%;
+    margin: 0 auto 120px auto;
+    overflow: hidden;
+    position: relative;   
+}
+.flickity-enabled:focus {
+    outline: none; /* quita el recuadro que se hace al hacer click en el carrousel */
+    cursor: grab;
+}
+.guitarraCarouselFlickity {
+    width: 15%;  /* Determina la cantidad de cajas que se van a ver del carrousel */
+    height: 450px;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imagenGuitarraCarousel{
+    height: 350px;
+    margin: 0;
+}
+.guitarraCarouselFlickity img{
+    height: 350px;
+    margin: 0;
+}
+.nombreGuitarraIndex{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px auto 0 auto;  
+    transform: skew(-15deg);
+    padding: 0 5px;
+}
+.flickity-prev-next-button.previous {
+    position: absolute;
+    left: 0% !important;
+    color: red!important;
+    background: transparent;
+    border: transparent;
+    top: 50%;
+    width: 45px;
+    z-index: 50;
+}
+.flickity-prev-next-button.next {
+    position: absolute;
+    right: 0% !important;
+    color: red!important;
+    background: transparent;
+    border: transparent;
+    top: 50%;
+    width: 45px;
+    z-index: 50;
+}
+.flickity-page-dots {  /* Pelotitas inferiores de navegacion */
+    display: none;
+}
+@media (max-width:800px){
+    .autoCarouselFlickity {
+        width: 50%;
+    }
+}
+
+.porQueIndex{
+    background: var(--color-secundario);
+    padding-bottom: 80px;
+    padding-top: 80px;
+    color: white;
+}
+.porQueIndex h2{
+    color: white!important;
+}
+.iconosIndex{
+    margin: 50px auto 0 auto;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cajaIconoIndex{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-size:15px;
+    font-weight: bold;
+    margin: 15px;
+    position: relative;
+    cursor: crosshair;
+}
+.cajaIconoIndex div{
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transition: .6s ease-in-out;
+    padding: 20px;
+}
+.cajaIconoIndex img{
+    height: 130px;
+    object-fit: cover; /* no achica la imagen, sino que la pasa por arriba */
+}
+.cajaIconoIndex .front{
+    transform: perspective(500px) rotateY(0deg);
+    border: none;
+    background: white;
+    border-radius: 10px;
+}
+  /* en la propiedad Transform si quiero modificar el giro (vertircal, horizontal, izq a der, der a izq tengo que modificar rotateY a rotateX y los grados + a - */
+.cajaIconoIndex .back{
+    background-color: black;
+    color: white;
+    transform: perspective(500px) rotateY(180deg); 
+    border-radius: 10px;
+}
+.cajaIconoIndex:hover .front{
+    transform: perspective(500px) rotateY(180deg);
+}
+.cajaIconoIndex:hover .back{
+    transform: perspective(500px) rotateY(360deg);
+}
+
+.bannerMate{
+    text-transform: uppercase;
+    color: white;
+    font-size:50px;
+    font-weight:bold;
+    text-shadow: 4px 3px 5px rgba(42, 49, 48, 0.8);
+    background: url(/images/index/banner-mate-sierras.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media(max-width:1400px){
+    .guitarraCarouselFlickity {
+        width: 25%;
+    }
+}
+@media (max-width:1100px){
+    .cajaCarouselFlickity{
+        width: 100%;
+    }
+    .iconosIndex{
+        width: 90%;
+    }
+    .cajaIconoIndex{
+        width: 120px;
+        height: 120px;
+    }
+    .cajaIconoIndex div{
+        height: 120px;
+    }
+    .cajaIconoIndex img{
+        height: 90px;
+    }
+    .tituloRegresiva{
+        font-size: 30px;
+        margin: 15px ;
+    }
+}
+@media (max-width:800px){
+    .guitarraCarouselFlickity {
+        width: 33%;  /* Determina la cantidad de cajas que se van a ver del carrousel */
+    }
+}
+@media (max-width:700px){
+    .categoria{
+        margin: 20px;
+    }
+}
+@media (max-width:680px){
+    .bannerVideoIndex{
+        display: none;
+    }
+    .bannerVideoIndexMobile{
+        display: block;
+
+    }
+    .bannerVideoIndexMobile video{
+        object-fit: cover; /* no achica la imagen, sino que la pasa por arriba */
+        width: 100%;
+    }
+}
+@media (max-width:480px){
+    .guitarraCarouselFlickity {
+        width: 50%;  /* Determina la cantidad de cajas que se van a ver del carrousel */
+    }
+
+}

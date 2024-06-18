@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  
+    <head>
+        <%- include('../partials/head.ejs') %>  
+    </head>
+
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+    
+    <body>
+    
+        <br>
+        
+        <h1>LOGIN</h1>
+
+        <form method="POST" action="/usuarios/login">
+            <div class="formularioLogin">
+                <input 
+                    type="text" 
+                    name="email" 
+                    class="form-control"
+                    required
+                    placeholder="✉️ Correo electrónico">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
+                <div class="campoContrasenia">
+                    <input 
+                        type="password" 
+                        name="password" 
+                        class="form-control"
+                        id="contraseña"
+                        required
+                        placeholder="🔑 Contraseña">
+                        <span>
+                            <i class="fas fa-eye" id="Eye"></i>
+                        </span>
+                </div>
+                <div class="invalid-feedback">
+                </div>
+                <div class="cajaCheckBox">
+                    <div><input type="checkbox" name="remember_user" id="checkRecordarme" style="box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);"></div>
+                    <label for="checkRecordarme" >Recordar mi usuario</label>
+                </div>
+                <button type="submit" class="loginButton">INGRESAR <i class="fa-solid fa-right-to-bracket"></i>
+                    <span class="relleno"></span>
+                </button>
+            </div>
+        </form>       
+
+    </body>
+        
+    <script src="../javascripts/hideEye.js"></script>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</html>

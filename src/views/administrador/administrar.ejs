@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <%- include('../partials/head.ejs') %>  
+  </head>
+
+  <header>
+      <%- include('../partials/header.ejs') %>
+  </header>
+  
+  <body>
+
+    <br>
+    <h1>ADMINISTRADOR DE PRODUCTOS</h1>
+    
+    <div class="accesoCrear">
+      <button>
+        <a href="/administrar/crear"><i class="fa-solid fa-circle-plus"></i> CREAR PRODUCTO</a>
+      </button>
+    </div>
+
+    <table class="tablaAdministrar">
+        <tr>
+          <th style="width:50px">ID</th>
+          <th style="width:300px">NOMBRE</th>
+          <th style="width:400px">MODELO</th>
+          <th style="width:200px">MARCA</th>
+          <th style="width:120px">PRECIO</th>
+          <th style="width:120px;">IMAGEN</th>
+          <th style="width:120px;">EDITAR</th>
+          <th style="width:120px;">ELIMINAR</th>
+        </tr>
+        <% productos.forEach(producto => { %>
+          <tr>
+            <td style="text-align:center;padding-left:0"><%= producto.id %></td>
+            <td><%= producto.nombre %></td>
+            <td><%= producto.modelo %></td>
+            <td><%= producto.marca %></td>
+            <td><%= producto.precio %></td>
+            <td style="text-align:center;padding-left:0"><img src="/images/productos/<%= producto.imagen %>"></td>
+            <td style="text-align:center;padding-left:0"><a href="/administrar/editar/<%= producto.id %>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+            <td style="text-align:center;padding-left:0">
+              <form action="/administrar/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
+                <button type="submit"><i class="fa-solid fa-trash"></i></button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </table>
+
+      <br><br>
+
+      <div class="tarjetaProductoListado">
+        <% productos.forEach(producto => { %>
+        <div class="tarjetaProducto">
+          <p style="text-align:center;padding-left:0"><img src="/images/productos/<%= producto.imagen %>"></p>
+          <p><strong>ID:</strong> <%= producto.id %></p>
+          <p><strong>NOMBRE:</strong> <%= producto.nombre %></p>
+          <p><strong>MODELO:</strong> <%= producto.modelo %></p>
+          <p><strong>MARCA:</strong> <%= producto.marca %></p>
+          <p><strong>PRECIO:</strong> <%= producto.precio %></p>
+          <div class="botonesAdministrar">
+            <div><a href="/administrar/editar/<%= producto.id %>"><button>EDITAR</button></a></div>
+            <div>
+              <form action="/administrar/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
+                <button type="submit">ELIMINAR</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    
+      <br><br>
+
+  </body>
+  
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
+
+</html>

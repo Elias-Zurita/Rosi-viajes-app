@@ -1,0 +1,98 @@
+<header class="fixed-top">
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    
+    <div class="promoHeader">
+        🔥 3 y 6 CUOTAS S/ INTERES con SANTANDER - 📞 11 2323 4545
+    </div>
+    
+    <nav class="navbar navbar-expand-lg" style="padding-top: 0; padding-bottom: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">MC</a>
+            <a class="inicioHeader" href="/">Music Center</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Burger Button WH3S -->
+                <div class="container" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/productos">TODOS LOS PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            CATEGORIAS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/productos/Guitarras electricas">Guitarras eléctricas</a></li>
+                            <li><a class="dropdown-item" href="/productos/Guitarras acusticas">Guitarras acústicas</a></li>
+                            <li><a class="dropdown-item" href="/productos/Bajos">Bajos</a></li>
+                            <li><a class="dropdown-item" href="/productos/Teclados">Teclados</a></li>
+                            <li><a class="dropdown-item" href="/productos/Baterias">Baterias</a></li>
+                            <li><a class="dropdown-item" href="/productos/Amplificadores">Amplificadores</a></li>
+                        </ul>
+                    </li>
+                    <% if (locals.isLogged) { %>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+                                Hi <%= locals.userLogged.fullName %> 
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/usuarios/profile"><i class="fa-solid fa-address-card"></i> Mi perfil</a>
+                                <li><hr class="dropdown-divider"></li>
+                                <a class="dropdown-item" href="/usuarios/logout"><i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i> Cerrar sesión</a>
+                            </ul>
+                        </li>
+                        <% if (locals.userLogged.category == "admin") { %>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/administrar/productsList"><i class="fa-solid fa-guitar"></i> Productos</a></li>
+                                </ul>
+                            </li>
+                        <% } %>
+                    <% } else { %>    <!-- Si no esta logueado muestra lo siguiente -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/usuarios/login"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</a></li>
+                            </ul>
+                        </li>
+                    <% } %>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-shop"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/ubicacion"><i class="fa-solid fa-location-dot"></i> Ubicación</a></li>
+                            <li><a class="dropdown-item" href="/contacto"><i class="fa-solid fa-message"></i> Contacto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+           
+                <form class="d-flex" role="search" method="GET" action="/productos/buscar">
+                    <input class="form-control me-2" id="busqueda" type="search" name="buscar" placeholder="¿Qué estás buscando?" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+      
+
+    <script>
+        function myFunction(x) {
+          x.classList.toggle("change");
+        }
+    </script>
+    
+</header>

@@ -1,0 +1,44 @@
+.padrePerfil{
+    display: flex;
+    width: 700px;
+    margin: 0 auto 10px auto;
+}
+.imagenPefil{
+    width: 50%;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatarProfile{
+    width:300px;
+    border-radius: 10px;
+}
+.infoPerfil{
+    padding-top: 30px;
+    width: 50%;
+    font-family: "Poppins";
+    font-size: 20px;
+}
+@media (max-width: 800px){ 
+    .padrePerfil{
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+    }
+    .imagenPefil{
+        width: 100%;
+
+    }
+    .avatarProfile{
+        width:350px;
+    }
+    .infoPerfil{
+        width: 100%;
+    }
+}
+@media (max-width: 500px){ 
+    .avatarProfile{
+        width:90%;
+    }
+}
