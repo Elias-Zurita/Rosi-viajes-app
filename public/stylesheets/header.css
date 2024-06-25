@@ -33,7 +33,7 @@
     padding-bottom: 5px;
 }
 .navbar{
-    background: black;
+    background: var(--color-primario);
 }
 .navbar a {
     color: white;
@@ -51,12 +51,12 @@
 }
 .nav-item {
     margin-right: 26px;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: "Poppins";
+    font-size: 15px;
+    
+    font-family: Montserrat,sans-serif;
 }
 .nav-item a:hover{
-    color: #F34E3A;
+    color: var(--color-secundario);
 }
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show { /* Despues de hacer click en el dropdownmenu */
     color: #F34E3A!important;
