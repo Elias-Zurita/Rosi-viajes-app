@@ -12,28 +12,48 @@
     <body>
 
         <br>
-        <h1>EDITAR PRODUCTO</h1>
+        <h1>EDITAR PAQUETE</h1>
 
-        <form action="/administrar/editar/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/administrar/editar/<%= paquete.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="imagenYEdicion">
                 <div class="imagenEdicion">
-                    <img src="/images/productos/<%= producto.imagen %>">
+                    <img src="/images/paquetes/<%= paquete.Banner %>">
                 </div>
                 <div class="formularioEdicionProducto">
                     <div>NOMBRE:</div>
-                    <input type="text" placeholder="NOMBRE NUEVO" name="nombre" value="<%= producto.nombre %>" required>
-                    <div>MODELO:</div>
-                    <input type="text" placeholder="MODELO NUEVO" name="modelo" value="<%= producto.modelo %>" required>
-                    <div>MARCA:</div>
-                    <input type="text" placeholder="MARCA NUEVA" name="marca" value="<%= producto.marca %>" required>
+                    <input type="text" placeholder="NOMBRE NUEVO" name="Nombre" value="<%= paquete.Nombre %>" required>
+                    <div>DIAS:</div>
+                    <input type="text" placeholder="DIAS NUEVO" name="Dias" value="<%= paquete.Dias %>" required>
+                    <div>FECHA:</div>
+                    <input type="text" placeholder="FECHA NUEVA" name="Fecha" value="<%= paquete.Fecha %>" required>
+                    <div>TRASLADOS:</div>
+                    <input type="text" placeholder="TRASLADOS NUEVO" name="Traslados" value="<%= paquete.Traslados %>" required>
                     <div>CATEGORIA:</div>
-                    <input type="text" placeholder="CATEGORIA NUEVA" name="categoria" value="<%= producto.categoria %>" required>
+                    <select name="Categoria" id="">
+                    <option value="">Elegí una categoria</option>
+                        <%  
+                            let Categorias = ['micros', 'aereos'];
+                        %>
+                        <% for (const unaCategoria of Categorias) { %>
+                            <option 
+                            value="<%= unaCategoria %>"
+                                <%= locals.oldData && (unaCategoria === oldData.Categoria) ? 'selected' : null %>> 
+                                <%= unaCategoria %> 
+                            </option>
+                        <% } %>
+                </select>
+                    <div>HOSPEDAJE:</div>
+                    <input type="text" placeholder="HOSPEDAJE NUEVO" name="Hospedaje" required value="<%= paquete.Hospedaje %>">
+                    <div>REGIMEN:</div>
+                    <input type="text" placeholder="REGIMEN NUEVO" name="Regimen" value="<%= paquete.Regimen %>" required>
                     <div>PRECIO:</div>
-                    <input type="text" placeholder="PRECIO NUEVO" name="precio" required value="<%= producto.precio %>">
-                    <div>DESCRIPCIÓN:</div>
-                    <input type="text" placeholder="DESCRIPCION NUEVA" name="descripcion" value="<%= producto.descripcion %>" required>
-                    <div>IMAGEN:</div>
-                    <input type="file" placeholder="IMAGEN NUEVA" name="imagen" id="imagen">
+                    <input type="text" placeholder="PRECIO NUEVO" name="Precio" value="<%= paquete.Precio %>" required>
+                    <div>PRECIO RESERVA:</div>
+                    <input type="text" placeholder="PRECIO RESERVA NUEVO" name="Precio_Reserva" value="<%= paquete.Precio_Reserva %>" required>
+                    <div>DETALLES:</div>
+                    <input type="text" placeholder="DETALLES NUEVOS" name="Detalles" value="<%= paquete.Detalles %>" required>
+                    <div>BANNER:</div>
+                    <input type="file" placeholder="BANNER NUEVO" name="Banner" id="Banner">
                 </div>
             </div>
 
@@ -46,14 +66,13 @@
             </div>
         </form>
         <div class="botonesEdicion">
-            <a href="/administrar/productsList">
+            <a href="/administrar/paquetesList">
                 <button class="loginButton">VOLVER
                     <span class="relleno"></span>
                 </button>
             </a>
         </div>
         
-
         <br><br>
         
     </body>

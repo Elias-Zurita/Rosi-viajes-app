@@ -1,77 +1,87 @@
 const path = require('path'); // Libreria path para usar put y delete
 const fs = require('fs');  // Libreria fileSync para leer archivos JSON
 
-// PRODUCTOS JSON
+// PAQUETES JSON
 function findAll() {
-    let productosJson =  fs.readFileSync(path.join(__dirname, "../database/productos.json"))   // Lee el archivo products.json donde estan los productos
-    let data = JSON.parse(productosJson) // Declara data para "parsear" (consumir) la info del Json
+    let paquetesJson =  fs.readFileSync(path.join(__dirname, "../database/paquetes.json"))   // Lee el archivo paquetes.json donde estan los productos
+    let data = JSON.parse(paquetesJson); // Declara data para "parsear" (consumir) la info del Json
     return data 
 }
 function writeJson(array){   // Sobreescribe info al JSON data
     let arrayJSON = JSON.stringify(array, null," ")  // Convierte el array en JSON  //  se agrega null y las comillas para que quede un espacio
-    return fs.writeFileSync(path.join(__dirname, "../database/productos.json"), arrayJSON);  
+    return fs.writeFileSync(path.join(__dirname, "../database/paquetes.json"), arrayJSON);  
 }
 
 module.exports = {
     listado: (req, res) => {
-        let productos = findAll();
-        res.render("administrador/administrar", {productos}) 
+        let paquetes = findAll();
+        res.render("administrador/administrar", { paquetes }); 
     },
     crear: (req, res) => {
-        let productos = findAll();
-        res.render("administrador/crear", {productos})
+        let paquetes = findAll();
+        res.render("administrador/crear", { paquetes });
     },
     crearProceso: (req, res) => {
-        let productos = findAll();
-        let nuevoProducto = {
-            id: productos.length + 1,  // Cuenta la cantidad de elementos que se tienen y le suma uno
-            nombre: req.body.nombre,
-            modelo: req.body.modelo,
-            marca: req.body.marca,
-            categoria: req.body.categoria,
-            precio: req.body.precio,
-            descripcion: req.body.descripcion,
-            imagen: req.file.filename,
-        }
-        let productosActualizados = [...productos, nuevoProducto]  // Ingresa los datos de nuevoProducto en un producto 
+      let paquetes = findAll();
+      let nuevoPaquete = {
+        id: paquetes.length + 1, // Cuenta la cantidad de elementos que se tienen y le suma uno
+        Nombre: req.body.Nombre,
+        Dias: req.body.Dias,
+        Fecha: req.body.Fecha,
+        Traslados: req.body.Traslados,
+        Categoria: req.body.Categoria,
+        Hospedaje: req.body.Hospedaje,
+        Regimen: req.body.Regimen,
+        Precio: req.body.Precio,
+        Precio_Reserva: req.body.Precio_Reserva,
+        Detalles: req.body.Detalles,
+        Banner: req.file.filename,
+      };
+      let paquetesActualizados = [...paquetes, nuevoPaquete]; // Ingresa los datos de nuevoPaquete en un producto
 
-        writeJson(productosActualizados);
-        res.redirect("/administrar/productsList");
+      writeJson(paquetesActualizados);
+      res.redirect("/administrar/paquetesList");
     },
     editar: (req, res) => {
-        let productos = findAll();
-        let productoAEditar = productos.find(producto => // Encuentro un producto
-            producto.id == req.params.id); // Renderiza el producto que se pide por id
+        let paquetes = findAll();
+        let paqueteAEditar = paquetes.find(paquete => // Encuentro un paquete
+            paquete.id == req.params.id); // Renderiza el paquete que se pide por id
 
-        res.render("administrador/editar", {producto: productoAEditar})
+        res.render("administrador/editar", { paquete: paqueteAEditar });
     },
     editarProceso: (req, res) => {
-        let productos = findAll();
-        let productosActualizados = productos.map(producto =>{ // busca en el array el elemento al que va a editar e itera sobre cada dato
-            if (producto.id == req.params.id){ //si el producto es igual al parametro que nos llega por ruta actualiza los datos //
-                producto.nombre = req.body.nombre
-                producto.modelo = req.body.modelo
-                producto.marca = req.body.marca
-                producto.categoria = req.body.categoria
-                producto.precio = req.body.precio
-                producto.descripcion = req.body.descripcion
-                producto.imagen = req.file ? req.file.filename : producto.imagen
-            }
-            return producto
-        }) 
-        writeJson(productosActualizados); // modifica el producto //
+      let paquetes = findAll();
+      let paquetesActualizados = paquetes.map((paquete) => {
+        // busca en el array el elemento al que va a editar e itera sobre cada dato
+        if (paquete.id == req.params.id) {
+          //si el paquete es igual al parametro que nos llega por ruta actualiza los datos //
+          paquete.Nombre = req.body.Nombre;
+          paquete.Dias = req.body.Dias;
+          paquete.Fecha = req.body.Fecha;
+          paquete.Traslados = req.body.Traslados;
+          paquete.Categoria = req.body.Categoria;
+          paquete.Hospedaje = req.body.Hospedaje;
+          paquete.Regimen = req.body.Regimen;
+          paquete.Precio = req.body.Precio;
+          paquete.Precio_Reserva = req.body.Precio_Reserva;
+          paquete.Detalles = req.body.Detalles;
+          paquete.Banner = req.file ? req.file.filename : paquete.Banner;
+        }
+        return paquete;
+      });
+      writeJson(paquetesActualizados); // modifica el paquete //
 
-        res.redirect("/productos/detalle/"+req.params.id) // redirecciona a la pagina de detalle del producto editado //
+      res.redirect("/paquetes/detalle/" + req.params.id); // redirecciona a la pagina de detalle del paquete editado //
     },
     eliminar: (req, res) => {
-        let productos = findAll();
-        let dataNueva = productos.filter(function(productos){ // Filtro los productos para excluir el que se debe eliminar
-            return productos.id != req.params.id // Todos los productos distintos del seleccionado que vino por id
-        })
+      let paquetes = findAll();
+      let dataNueva = paquetes.filter(function (paquetes) {
+        // Filtro los paquetes para excluir el que se debe eliminar
+        return paquetes.id != req.params.id; // Todos los paquetes distintos del seleccionado que vino por id
+      });
 
-        writeJson(dataNueva)  // Escribo el nuevo conjunto de productos al archivo JSON sin el producto eliminado
+      writeJson(dataNueva); // Escribo el nuevo conjunto de paquetes al archivo JSON sin el paquete eliminado
 
-        res.redirect("/administrar");
+      res.redirect("/administrar/paquetesList");
     }
 }
-

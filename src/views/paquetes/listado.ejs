@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
+
+  <header><%- include('../partials/header.ejs') %></header>
+
+  <body>
+    <br />
+    <h1>NUESTROS PAQUETES</h1>
+
+    <div class="listadoPadre">
+      <% paquetes.forEach(paquete => { %>
+      <div class="cajaProducto">
+        <a href="/paquetes/detalle/<%= paquete.id %>">
+          <div class="cajaImagenProducto">
+            <img src="/images/paquetes/<%= paquete.Banner %>" />
+            <div class="textoConHover">
+              <div style="font-family: 'Teko', sans-serif">
+                <%= paquete.Nombre %>
+              </div>
+              <div style="font-size: 16px"><%= paquete.Dias %></div>
+              <div style="font-style: italic; font-size: 19px">
+                <%= paquete.Fecha %>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="precioProducto">$ <%= paquete.Precio %></div>
+          <a href="https://wa.me/5491149141781?text=Hola,%20quiero%20reservar:%20 <%=paquete.Nombre %>" target="_blank"><button type="submit" class="addCart">Quiero reservar!</button></a>
+        </div>
+      <% }) %>
+    </div>
+
+    <div class="pagination">
+      <div class="numerosPagina">
+        <% for (let i = 1; i <= totalPages; i++) { %>
+        <a
+          href="?page=<%= i %>&buscar=<%= terminoDeBusqueda %>"
+          class="<%= currentPage === i ? 'active' : '' %> numerito"
+          ><%= i %></a
+        >
+        <% } %>
+      </div>
+      <div class="navegacionPagina">
+        <% if (currentPage > 1) { %>
+        <a
+          href="?page=<%= currentPage - 1 %>&buscar=<%= terminoDeBusqueda %>"
+          class="prevnext"
+          >&laquo; Anterior</a
+        >
+        <% } %> <% if (currentPage < totalPages) { %>
+        <a
+          href="?page=<%= currentPage + 1 %>&buscar=<%= terminoDeBusqueda %>"
+          class="prevnext"
+          >Siguiente &raquo;</a
+        >
+        <% } %>
+      </div>
+    </div>
+
+    <div class="iconosIndex">
+      <div class="cajaIconoIndex">
+        <div class="face front">
+          <img src="images/index/icono_transporte.png" alt="" />
+        </div>
+        <div class="face back">
+          <div class="nombreIconoIndex">Buses semi camas y camas</div>
+        </div>
+      </div>
+      <div class="cajaIconoIndex">
+        <div class="face front">
+          <img src="images/index/icono_avion.png" alt="" />
+        </div>
+        <div class="face back">
+          <div class="nombreIconoIndex">Volá dentro y fuera del país</div>
+        </div>
+      </div>
+      <div class="cajaIconoIndex">
+        <div class="face front">
+          <img src="images/index/icono_tarjeta.png" alt="" />
+        </div>
+        <div class="face back">
+          <div class="nombreIconoIndex">Efectivo, transferencia o MP</div>
+        </div>
+      </div>
+      <div class="cajaIconoIndex">
+        <div class="face front">
+          <img src="images/index/atencion.png" alt="" />
+        </div>
+        <div class="face back">
+          <div class="nombreIconoIndex">Atención personalizada</div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <footer><%- include('../partials/footer.ejs') %></footer>
+</html>

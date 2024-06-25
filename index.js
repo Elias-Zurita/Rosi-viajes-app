@@ -8,7 +8,7 @@ const cookies = require('cookie-parser');  // Es una libreria que se usa para gu
 
 // Routers
 const indexRouter = require('./src/routes/mainRoutes.js');
-const productosRouter = require('./src/routes/productosRoutes');
+const paquetesRouter = require("./src/routes/paquetesRoutes");
 const usuariosRouter = require('./src/routes/usuariosRoutes');
 const adminRouter = require('./src/routes/adminRoutes.js');
 
@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // Ubicacion de archivo
 
 // Rutas a utilizar
 app.use('/', indexRouter);
-app.use('/productos', productosRouter);
+app.use("/paquetes", paquetesRouter);
 app.use('/usuarios', usuariosRouter);
 app.use('/administrar', adminRouter);
 

@@ -1,0 +1,30 @@
+[
+ {
+  "id": 2,
+  "Nombre": "uuu",
+  "Dias": "www",
+  "Fecha": "asas",
+  "Traslados": "wqqw",
+  "Categoria": "micros",
+  "Hospedaje": "ass",
+  "Regimen": "qqw",
+  "Precio": "asas",
+  "Detalles": "ssd",
+  "Banner": "Banner1719330243807.jpg",
+  "Precio_Reserva": "ww"
+ },
+ {
+  "id": 3,
+  "Nombre": "asa",
+  "Dias": "wqqw",
+  "Fecha": "ww",
+  "Traslados": "ee",
+  "Categoria": "aereos",
+  "Hospedaje": "rr",
+  "Regimen": "dd",
+  "Precio": "vv",
+  "Precio_Reserva": "ss",
+  "Detalles": "xx",
+  "Banner": "Banner1719330330732.jpg"
+ }
+]

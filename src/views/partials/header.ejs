@@ -22,13 +22,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/productos">TODOS LOS PAQUETES</a>
+                        <a class="nav-link" href="/paquetes">TODOS LOS PAQUETES</a>
                     </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/productos"><i class="fa-solid fa-bus"></i>&nbsp PAQUETES EN MICRO</a>
+                        <a class="nav-link" href="/paquetes/micros"><i class="fa-solid fa-bus"></i>&nbsp PAQUETES EN MICRO</a>
                     </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/productos/aereos"><i class="fa-solid fa-plane"></i>&nbsp PAQUETES AEREOS</a>
+                        <a class="nav-link" href="/paquetes/aereos"><i class="fa-solid fa-plane"></i>&nbsp PAQUETES AEREOS</a>
                     </li>
                         <li class="nav-item">
                         <a class="nav-link" href="/preguntas"><i class="fa-solid fa-question"></i>&nbsp PREGUNTAS FRECUENTES</a>
@@ -40,7 +40,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
-                                Hi <%= locals.userLogged.fullName %> 
+                                <%= locals.userLogged.fullName %> 
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/usuarios/profile"><i class="fa-solid fa-address-card"></i> Mi perfil</a>
@@ -49,20 +49,13 @@
                             </ul>
                         </li>
                         <% if (locals.userLogged.category == "admin") { %>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/administrar/productsList"><i class="fa-solid fa-guitar"></i> Productos</a></li>
-                                </ul>
-                            </li>
+                            <a href="/administrar/paquetesList"><i class="fa-solid fa-wrench"></i></a>
                         <% } %>
                     <% } else { %>    <!-- Si no esta logueado muestra lo siguiente -->
                     <% } %>
                 </ul>
            
-                <form class="d-flex" role="search" method="GET" action="/productos/buscar">
+                <form class="d-flex" role="search" method="GET" action="/paquetes/buscar">
                     <input class="form-control me-2" id="busqueda" type="search" name="buscar" placeholder="¿Qué estás buscando?" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>

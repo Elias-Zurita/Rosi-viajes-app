@@ -35,8 +35,18 @@
   "nombre": "Rosana",
   "apellido": "Araujo",
   "email": "rosiviajes@gmail.com",
-  "password": "$2a$10$QiLF5vuqp8Z.xunai9/4CeT32Kq96F0OxhgUJktCBjBF07o7/89iS",
+  "password": "rosi123",
   "country": "Argentina",
   "avatar": "1718715282412_img.jpg"
+ },
+ {
+  "id": 5,
+  "category": "admin",
+  "nombre": "Rosiii",
+  "apellido": "ro",
+  "email": "roviajes@gmail.com",
+  "password": "$2a$10$4WJcXcerQBP2VFZDCoORVOZGjFHMyKp.z9yIewafdoBla1Dml4yO.",
+  "country": "Argentina",
+  "avatar": "1719328498844_img.jpg"
  }
 ]

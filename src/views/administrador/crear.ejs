@@ -17,25 +17,29 @@
         <form action="/administrar/crear" method="POST" enctype="multipart/form-data">
 
             <div class="formularioCreacionProducto">
-                <input type="text" placeholder="NOMBRE" name="nombre" required>
-                <input type="text" placeholder="MODELO" name="modelo" required>
-                <input type="text" placeholder="MARCA" name="marca" required>
-                <select name="categoria" id="">
+                <input type="text" placeholder="NOMBRE" name="Nombre" required>
+                <input type="text" placeholder="DIAS" name="Dias" required>
+                <input type="text" placeholder="FECHA" name="Fecha" required>
+                <input type="text" placeholder="TRASLADOS" name="Traslados" required>
+                <input type="text" placeholder="HOSPEDAJE" name="Hospedaje" required>
+                <input type="text" placeholder="REGIMEN" name="Regimen" required>
+                <input type="text" placeholder="PRECIO" name="Precio" required>
+                <input type="text" placeholder="PRECIO RESERVA" name="Precio_Reserva" required>
+                <input type="text" placeholder="DETALLES" name="Detalles" required>
+                <select name="Categoria" id="">
                     <option value="">Elegí una categoria</option>
                         <%  
-                            let categorias = ['Guitarras electricas', 'Guitarras acusticas', 'Guitarras españolas', 'Bajos', 'Teclados', 'Amplificadores', 'Baterias'];
+                            let Categorias = ['micros', 'aereos'];
                         %>
-                        <% for (const unaCategoria of categorias) { %>
+                        <% for (const unaCategoria of Categorias) { %>
                             <option 
                             value="<%= unaCategoria %>"
-                                <%= locals.oldData && (unaCategoria === oldData.categoria) ? 'selected' : null %>> 
+                                <%= locals.oldData && (unaCategoria === oldData.Categoria) ? 'selected' : null %>> 
                                 <%= unaCategoria %> 
                             </option>
                         <% } %>
                 </select>
-                <input type="number" placeholder="PRECIO" name="precio" required max="5000000" min="1">
-                <input type="text" placeholder="DESCRIPCION" name="descripcion" required>
-                <input type="file" placeholder="IMAGEN" name="imagen" required>
+                <input type="file" placeholder="BANNER" name="Banner" required>
             </div>
 
             <div class="botonCrear">

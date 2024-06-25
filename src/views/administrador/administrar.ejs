@@ -23,25 +23,21 @@
     <table class="tablaAdministrar">
         <tr>
           <th style="width:50px">ID</th>
+          <th style="width:200px">BANNER</th>
           <th style="width:300px">NOMBRE</th>
-          <th style="width:400px">MODELO</th>
-          <th style="width:200px">MARCA</th>
-          <th style="width:120px">PRECIO</th>
-          <th style="width:120px;">IMAGEN</th>
-          <th style="width:120px;">EDITAR</th>
+          <th style="width:400px">PRECIO</th>
+          <th style="width:120px">EDITAR</th>
           <th style="width:120px;">ELIMINAR</th>
         </tr>
-        <% productos.forEach(producto => { %>
+        <% paquetes.forEach(paquete => { %>
           <tr>
-            <td style="text-align:center;padding-left:0"><%= producto.id %></td>
-            <td><%= producto.nombre %></td>
-            <td><%= producto.modelo %></td>
-            <td><%= producto.marca %></td>
-            <td><%= producto.precio %></td>
-            <td style="text-align:center;padding-left:0"><img src="/images/productos/<%= producto.imagen %>"></td>
-            <td style="text-align:center;padding-left:0"><a href="/administrar/editar/<%= producto.id %>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+            <td style="text-align:center;padding-left:0"><%= paquete.id %></td>
+            <td style="text-align:center;padding-left:0"><img src="/images/paquetes/<%= paquete.Banner %>"></td>
+            <td><%= paquete.Nombre %></td>
+            <td><%= paquete.Precio %></td>
+            <td style="text-align:center;padding-left:0"><a href="/administrar/editar/<%= paquete.id %>"><i class="fa-solid fa-pen-to-square"></i></a></td>
             <td style="text-align:center;padding-left:0">
-              <form action="/administrar/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
+              <form action="/administrar/eliminar/<%= paquete.id %>?_method=DELETE" method="POST">
                 <button type="submit"><i class="fa-solid fa-trash"></i></button>
               </form>
             </td>
@@ -52,18 +48,16 @@
       <br><br>
 
       <div class="tarjetaProductoListado">
-        <% productos.forEach(producto => { %>
+        <% paquetes.forEach(paquete => { %>
         <div class="tarjetaProducto">
-          <p style="text-align:center;padding-left:0"><img src="/images/productos/<%= producto.imagen %>"></p>
-          <p><strong>ID:</strong> <%= producto.id %></p>
-          <p><strong>NOMBRE:</strong> <%= producto.nombre %></p>
-          <p><strong>MODELO:</strong> <%= producto.modelo %></p>
-          <p><strong>MARCA:</strong> <%= producto.marca %></p>
-          <p><strong>PRECIO:</strong> <%= producto.precio %></p>
+          <p style="text-align:center;padding-left:0"><img src="/images/paquetes/<%= paquete.Banner %>"></p>
+          <p><strong>ID:</strong> <%= paquete.id %></p>
+          <p><strong>NOMBRE:</strong> <%= paquete.nombre %></p>
+          <p><strong>PRECIO:</strong> <%= paquete.precio %></p>
           <div class="botonesAdministrar">
-            <div><a href="/administrar/editar/<%= producto.id %>"><button>EDITAR</button></a></div>
+            <div><a href="/administrar/editar/<%= paquete.id %>"><button>EDITAR</button></a></div>
             <div>
-              <form action="/administrar/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
+              <form action="/administrar/eliminar/<%= paquete.id %>?_method=DELETE" method="POST">
                 <button type="submit">ELIMINAR</button>
               </form>
             </div>

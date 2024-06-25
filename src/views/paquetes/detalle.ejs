@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  
+    <head>
+        <%- include('../partials/head.ejs') %>  
+    </head>
+
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+  
+    <body>
+
+        <br>
+        <h1>DETALLE DE PAQUETE</h1>
+        
+        <div class="padreDetalle">
+            <div class="imagenDetalle">
+                <img src="/images/paquetes/<%= paquete.Banner %>">
+            </div>
+            <div class="infoDetalle">
+                <p><strong>NOMBRE:</strong> <%= paquete.Nombre %></p>
+                <p><strong>CATEGORIA:</strong> <%= paquete.Categoria %></p>
+                <p><strong>DIAS:</strong> <%= paquete.Dias %></p>
+                <p><strong>FECHA:</strong> <%= paquete.fecha %></p>
+                <p><strong>BUS:</strong> <%= paquete.Bus %></p>
+                <p><strong>HOSPEDAJE:</strong> <%= paquete.Hospedaje %></p>
+                <p><strong>REGIMEN:</strong> <%= paquete.Regimen %></p>
+                <p><strong>PRECIO RESERVA:</strong> <%= paquete.Reserva %></p>
+                <p><strong>PRECIO:</strong> <%= paquete.Precio %></p>
+                <p><strong>TRASLADOS:</strong> <%= paquete.Traslados %></p>
+                <p><strong>DETALLES:</strong> <%= paquete.Detalles %></p>
+            </div>
+            <div class="precioDetalle">
+                <p>$ <%= paquete.Precio %></p>
+                <p>Precios por Pasajero en pesos</p>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        
+    </body>
+  
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</html>
