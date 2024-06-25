@@ -20,7 +20,7 @@ function writeJson(array) {
 module.exports = {
   listado: (req, res) => {
     let paquetes = findAll();
-    const itemsPerPage = 15; // Declaro la cantidad de paquetes que quiero visualizar por pagina
+    const itemsPerPage = 10; // Declaro la cantidad de paquetes que quiero visualizar por pagina
     const page = parseInt(req.query.page) || 1; // Por default la pagina es la 1
 
     const startIndex = (page - 1) * itemsPerPage; // Indice del primer paquete por pagina
@@ -50,7 +50,7 @@ module.exports = {
         paquete.Nombre.toLowerCase().includes(terminoDeBusqueda) || // filtro los paquetes que contengan en su nombre un match con el termino de busqueda ingresado
         paquete.Categoria.toLowerCase().includes(terminoDeBusqueda) // Busqueda por Categoria tambien
     );
-    const itemsPerPage = 15;
+    const itemsPerPage = 10;
     const page = parseInt(req.query.page) || 1; // Default page is 1 if not specified
 
     const startIndex = (page - 1) * itemsPerPage;
@@ -71,7 +71,7 @@ module.exports = {
       // filtra las categorias de los paquetes
       return paquetes.Categoria == req.params.Categoria; // devuelve la categoria del paquete pedida por params(seleccionada en el navegador)
     });
-    const itemsPerPage = 15;
+    const itemsPerPage = 10;
     const page = parseInt(req.query.page) || 1; // Default page is 1 if not specified
 
     const startIndex = (page - 1) * itemsPerPage;

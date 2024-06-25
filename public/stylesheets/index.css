@@ -45,72 +45,10 @@
     font-size: 25px;
     text-transform: uppercase;
     margin-top: 10px;
-}
-
-/* CAROUSEL flickity */
-.cajaCarouselFlickity{
-    width: 80%;
-    margin: 0 auto 120px auto;
-    overflow: hidden;
-    position: relative;   
-}
-.flickity-enabled:focus {
-    outline: none; /* quita el recuadro que se hace al hacer click en el carrousel */
-    cursor: grab;
-}
-.guitarraCarouselFlickity {
-    width: 15%;  /* Determina la cantidad de cajas que se van a ver del carrousel */
-    height: 450px;
-    border-radius: 5px;
-    counter-increment: carousel-cell;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.imagenGuitarraCarousel{
-    height: 350px;
-    margin: 0;
-}
-.guitarraCarouselFlickity img{
-    height: 350px;
-    margin: 0;
-}
-.nombreGuitarraIndex{
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px auto 0 auto;  
-    transform: skew(-15deg);
-    padding: 0 5px;
-}
-.flickity-prev-next-button.previous {
-    position: absolute;
-    left: 0% !important;
-    color: red!important;
-    background: transparent;
-    border: transparent;
-    top: 50%;
-    width: 45px;
-    z-index: 50;
-}
-.flickity-prev-next-button.next {
-    position: absolute;
-    right: 0% !important;
-    color: red!important;
-    background: transparent;
-    border: transparent;
-    top: 50%;
-    width: 45px;
-    z-index: 50;
-}
-.flickity-page-dots {  /* Pelotitas inferiores de navegacion */
-    display: none;
+    font-weight: 500;
 }
 .porQueIndex{
-    background: #fdf9c4;
+    background: #E0A75E;
     padding-bottom: 80px;
     padding-top: 80px;
     color: black;

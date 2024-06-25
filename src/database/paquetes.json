@@ -26,5 +26,19 @@
   "Precio_Reserva": "ss",
   "Detalles": "xx",
   "Banner": "Banner1719330330732.jpg"
+ },
+ {
+  "id": 3,
+  "Nombre": "rr",
+  "Dias": "rr",
+  "Fecha": "rr",
+  "Traslados": "rr",
+  "Categoria": "micros",
+  "Hospedaje": "rrr",
+  "Regimen": "r",
+  "Precio": "22",
+  "Precio_Reserva": "344",
+  "Detalles": "wwewe",
+  "Banner": "Banner1719344807788.jpeg"
  }
 ]

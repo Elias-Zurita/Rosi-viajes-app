@@ -33,20 +33,17 @@
                         <a class="nav-link" href="/contacto"><i class="fa-solid fa-message"></i> CONTACTO</a>
                     </li>
                     <% if (locals.isLogged) { %>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
-                                <%= locals.userLogged.fullName %> 
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/usuarios/profile"><i class="fa-solid fa-address-card"></i> Mi perfil</a>
-                                <li><hr class="dropdown-divider"></li>
-                                <a class="dropdown-item" href="/usuarios/logout"><i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i> Cerrar sesión</a>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link logui" href="/usuarios/profile"><i class="fa-solid fa-address-card"></i> MI PERFIL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link logui" href="/usuarios/logout"><i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i> CERRAR SESIÓN</a>
                         </li>
                         <% if (locals.userLogged.category == "admin") { %>
-                            <a href="/administrar/paquetesList"><i class="fa-solid fa-wrench"></i></a>
-                        <% } %>
+                        <li class="nav-item">
+                            <a class="nav-link logui"href="/administrar/paquetesList"><i class="fa-solid fa-wrench"></i> ADMINISTRAR</a>
+                            <% } %>
+                        </li>
                     <% } else { %>    <!-- Si no esta logueado muestra lo siguiente -->
                     <% } %>
                 </ul>

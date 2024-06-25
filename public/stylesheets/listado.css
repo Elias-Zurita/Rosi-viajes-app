@@ -12,34 +12,32 @@
   width: 400px;
   margin: 15px;
   align-items: center;
-  border: violet solid 2px
+  border: violet solid 2px;
+  justify-content: space-between;
 }
 .cajaImagenProducto{
   position: relative;
   width: 400px;
-  height: 400px;
-  overflow: hidden;
   display: flex;
   flex-wrap: wrap;  
   text-align: center;
-  box-shadow: 0 0 20px var(--color-primario);
   cursor: pointer;
-  padding: 5px;
   background-color: white;
   transition: 0.3s ease-in-out;
   align-items: center;
   justify-content: center;
 }
 .cajaImagenProducto:hover{
-  background-color: rgba(41,40,45,.85);
-  transform: scale(1.05);
+  background-color: black;
+  border-radius: 10px;
 }
 .cajaImagenProducto img{
-  height: 100%;
+  width: 100%;
   transition: .3s ease-in-out;
+  border-radius: 10px;
 }
 .cajaImagenProducto:hover img{
-  opacity: 0.4;
+  opacity: 0.2;
 }
 .cajaProducto button{
   border: none;
@@ -67,7 +65,7 @@
   flex-direction: column;
   justify-content: center;
   transition: 1s;
-  font-size: 22px;
+  font-size: 30px;
   letter-spacing: 3px;
   transition: .2s;
   font-weight: bold;
@@ -143,15 +141,22 @@
   background-color: rgba(72, 72, 72, 0.482);
   color: white;
 }
+.cajaIconosListado{
+  background-color: #E0A75E;
+  padding: 0px 0 50px 0 ;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 @media (max-width:480px){
   .listadoPadre{
     width: 100%;
   }
   .cajaProducto{
-    width: 150px;
+    width: 320px;
     margin: 10px;
   }
   .cajaImagenProducto{
-    width: 150px;
+    width: 320px;
   }
 } 

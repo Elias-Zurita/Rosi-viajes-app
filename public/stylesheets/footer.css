@@ -90,3 +90,8 @@ footer{
     padding-left: 7%;
   }
 }
+@media(max-width:480px){ 
+    .columnaFooter{
+        padding-left: 0px;
+    }
+}
