@@ -24,14 +24,6 @@
     transform: scale(1.2);
     border-radius: 50%;
 }
-.promoHeader{
-    text-align:center;
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
 .navbar{
     background: var(--color-primario);
 }

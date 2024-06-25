@@ -7,9 +7,6 @@
     object-fit: cover; /* no achica la imagen, sino que la pasa por arriba */
     margin-bottom: -7px;
 }
-.bannerVideoIndexMobile{
-    display:none
-}
 .categoriasIndex{
     width: 100%;
     display: flex;
@@ -112,12 +109,6 @@
 .flickity-page-dots {  /* Pelotitas inferiores de navegacion */
     display: none;
 }
-@media (max-width:800px){
-    .autoCarouselFlickity {
-        width: 50%;
-    }
-}
-
 .porQueIndex{
     background: var(--color-secundario);
     padding-bottom: 80px;
@@ -232,8 +223,11 @@
     }
 }
 @media (max-width:800px){
-    .guitarraCarouselFlickity {
-        width: 33%;  /* Determina la cantidad de cajas que se van a ver del carrousel */
+    .categoria{
+        width: 300px;
+    }
+    .textosPorque{
+        padding: 0 20px
     }
 }
 @media (max-width:700px){
@@ -241,22 +235,11 @@
         margin: 20px;
     }
 }
-@media (max-width:680px){
-    .bannerVideoIndex{
-        display: none;
-    }
-    .bannerVideoIndexMobile{
-        display: block;
-
-    }
-    .bannerVideoIndexMobile video{
-        object-fit: cover; /* no achica la imagen, sino que la pasa por arriba */
-        width: 100%;
-    }
-}
 @media (max-width:480px){
     .guitarraCarouselFlickity {
         width: 50%;  /* Determina la cantidad de cajas que se van a ver del carrousel */
     }
-
+    .bannerMate{
+        font-size: 30px;
+    }
 }
