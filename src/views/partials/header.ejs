@@ -5,7 +5,7 @@
     
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">MC</a>
+            <a class="navbar-brand" href="/">Rosi Viajes</a>
             <a class="inicioHeader" href="/">Rosi Viajes</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <!-- Burger Button WH3S -->
@@ -16,21 +16,21 @@
                 </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-lg-0 headerDesktop">
                     <li class="nav-item">
-                        <a class="nav-link" href="/paquetes">TODOS LOS PAQUETES</a>
+                        <a class="nav-link" href="/paquetes"><i class="fa-solid fa-list"></i> TODOS LOS PAQUETES</a>
                     </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/paquetes/micros"><i class="fa-solid fa-bus"></i>&nbsp PAQUETES EN MICRO</a>
+                        <a class="nav-link" href="/paquetes/micros"><i class="fa-solid fa-bus"></i> PAQUETES EN MICRO</a>
                     </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/paquetes/aereos"><i class="fa-solid fa-plane"></i>&nbsp PAQUETES AEREOS</a>
+                        <a class="nav-link" href="/paquetes/aereos"><i class="fa-solid fa-plane"></i> PAQUETES AEREOS</a>
                     </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/preguntas"><i class="fa-solid fa-question"></i>&nbsp PREGUNTAS FRECUENTES</a>
+                        <a class="nav-link" href="/preguntas"><i class="fa-solid fa-question"></i> PREGUNTAS FRECUENTES</a>
                     </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/contacto"><i class="fa-solid fa-message"></i>&nbsp CONTACTO</a>
+                        <a class="nav-link" href="/contacto"><i class="fa-solid fa-message"></i> CONTACTO</a>
                     </li>
                     <% if (locals.isLogged) { %>
                         <li class="nav-item dropdown">
@@ -51,8 +51,8 @@
                     <% } %>
                 </ul>
            
-                <form class="d-flex" role="search" method="GET" action="/paquetes/buscar">
-                    <input class="form-control me-2" id="busqueda" type="search" name="buscar" placeholder="¿Qué estás buscando?" aria-label="Search">
+                <form class="buscadorHeader" role="search" method="GET" action="/paquetes/buscar">
+                    <input class="form-control" id="busqueda" type="search" name="buscar" placeholder="¿Qué estás buscando?" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>

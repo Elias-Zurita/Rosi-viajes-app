@@ -2,7 +2,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(239, 235, 233, 0.8)
+    background-color: white
 }
 .padreColumnasFooter{
     padding: 3% 5% 2% 5%;
