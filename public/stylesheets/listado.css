@@ -12,12 +12,11 @@
   width: 400px;
   margin: 15px;
   align-items: center;
-  border: violet solid 2px;
-  justify-content: space-between;
 }
 .cajaImagenProducto{
   position: relative;
   width: 400px;
+  height: 497px;
   display: flex;
   flex-wrap: wrap;  
   text-align: center;
@@ -35,6 +34,7 @@
   width: 100%;
   transition: .3s ease-in-out;
   border-radius: 10px;
+  margin: auto 0;
 }
 .cajaImagenProducto:hover img{
   opacity: 0.2;
@@ -74,6 +74,9 @@
 .textoConHover:hover{
   opacity: 1;
   color: white;
+}
+.precioyReserva{
+  margin-top: auto;
 }
 .precioProducto{
   text-align: center;
@@ -158,5 +161,6 @@
   }
   .cajaImagenProducto{
     width: 320px;
+    height: auto;
   }
 } 

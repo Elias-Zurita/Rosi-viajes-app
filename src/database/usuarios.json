@@ -4,49 +4,19 @@
   "nombre": "Elias",
   "apellido": "Zurita",
   "email": "elias@dev.com",
-  "password": "$2a$10$biX7h3DYppazYqn7qSn3re7FPQi/iybky4ZNnQ23pVoydFsworHLC",
+  "password": "123",
   "country": "Argentina",
   "avatar": "avatar1701704207693.jpg",
   "category": "admin"
  },
  {
   "id": 2,
-  "category": "Cliente",
-  "nombre": "Pedritopp",
-  "apellido": "Mayer",
-  "email": "pedrito@gmail.com",
-  "password": "$2a$10$zCQRkw3DAmN763mhLl56Eerv0NciMGOd5ZWrs5VmVG9doO/CrmmRi",
-  "country": "",
-  "avatar": "1706269542773_img.jpg"
- },
- {
-  "id": 3,
-  "category": "Cliente",
-  "nombre": "eee",
-  "apellido": "Eeee",
-  "email": "pruebamail@gmail.com",
-  "password": "$2a$10$DR2bnpu.aP9m5UzQQMyHwe2bHnDoURMhhwnN2sQF/KoNuXEq07Foa",
-  "country": "",
-  "avatar": "1717677689356_img.jpg"
- },
- {
-  "id": 4,
   "category": "admin",
   "nombre": "Rosana",
   "apellido": "Araujo",
-  "email": "rosiviajes@gmail.com",
-  "password": "rosi123",
+  "email": "rosana@gmail.com",
+  "password": "$2a$10$GQzqcJXmy9oKW3NVojM07uvSKQ/n.Za6l6xGEuU8Zro8cgCIGbaHm",
   "country": "Argentina",
-  "avatar": "1718715282412_img.jpg"
- },
- {
-  "id": 5,
-  "category": "admin",
-  "nombre": "Rosiii",
-  "apellido": "ro",
-  "email": "roviajes@gmail.com",
-  "password": "$2a$10$4WJcXcerQBP2VFZDCoORVOZGjFHMyKp.z9yIewafdoBla1Dml4yO.",
-  "country": "Argentina",
-  "avatar": "1719328498844_img.jpg"
+  "avatar": "1719433699182_img.jpeg"
  }
 ]

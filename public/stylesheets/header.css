@@ -5,25 +5,31 @@
     margin-top: 13px;
     display: none;
 }
-
-/* Boton Arriba */
-.back-to-top {
-    position: fixed;
-    right: 60px;
-    bottom: 100px;
-    z-index: 11;
-    cursor: pointer;
-    animation: action 1s infinite alternate;
-    background: #E0A75E!important;
-    border: none!important;
-    transition: .3s ease-in-out!important;
-    border: black solid 2px!important;
+/* Boton WhatsApp */
+.btn-wsp{
+    position:fixed;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    bottom: 50px;
+    right: 50px;
+    background: #25D366;
+    border-radius:50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    transition: 0.3s ease-in-out;
 }
-.back-to-top:hover{
-    background-color: black!important;
-    color: white!important;
-    transform: scale(1.2);
-    border-radius: 50%;
+.btn-wsp i{
+    font-size: 40px;
+    color: #fff !important;
+}
+.btn-wsp:hover{
+    transform: scale(130%) rotate(360deg);
+    animation: none;
 }
 .navbar{
     background: var(--color-primario);
@@ -31,6 +37,9 @@
 .navbar a {
     color: white;
     text-align: center;
+}
+.navbar a:hover{
+    color:#E0A75E
 }
 .navbar-nav{
     align-items: center;
@@ -195,8 +204,13 @@
     }
 }
 @media (max-width:625px){ 
-    .back-to-top {
-        right: 25px;
-        bottom: 65px;
+    .btn-wsp{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        right: 20px;
     }
-}
+    .btn-wsp i{
+        font-size:30px
+    }
+  }

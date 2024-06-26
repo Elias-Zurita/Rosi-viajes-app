@@ -11,35 +11,45 @@
   
     <body>
 
-        <br>
-        <h1>DETALLE DE PAQUETE</h1>
+        <div class="tituloSucursales" style="margin-top:100px"><%= paquete.Nombre %></div>
         
+        <br><br>
+
         <div class="padreDetalle">
             <div class="imagenDetalle">
                 <img src="/images/paquetes/<%= paquete.Banner %>">
             </div>
             <div class="infoDetalle">
                 <p><strong>NOMBRE:</strong> <%= paquete.Nombre %></p>
-                <p><strong>CATEGORIA:</strong> <%= paquete.Categoria %></p>
                 <p><strong>DIAS:</strong> <%= paquete.Dias %></p>
-                <p><strong>FECHA:</strong> <%= paquete.fecha %></p>
-                <p><strong>BUS:</strong> <%= paquete.Bus %></p>
+                <p><strong>FECHA:</strong> <%= paquete.Fecha %></p>
+                <p><strong>TRASLADOS:</strong> <%= paquete.Traslados %></p>
                 <p><strong>HOSPEDAJE:</strong> <%= paquete.Hospedaje %></p>
                 <p><strong>REGIMEN:</strong> <%= paquete.Regimen %></p>
+                <p><strong>DETALLES:</strong> <%= paquete.Detalles %></p>
                 <p><strong>PRECIO RESERVA:</strong> <%= paquete.Reserva %></p>
                 <p><strong>PRECIO:</strong> <%= paquete.Precio %></p>
-                <p><strong>TRASLADOS:</strong> <%= paquete.Traslados %></p>
-                <p><strong>DETALLES:</strong> <%= paquete.Detalles %></p>
-            </div>
-            <div class="precioDetalle">
-                <p>$ <%= paquete.Precio %></p>
-                <p>Precios por Pasajero en pesos</p>
+                <a href="https://wa.me/5491149141781?text=Hola,%20quiero%20reservar:%20 <%=paquete.Nombre %>" target="_blank"><button type="submit" class="addCart">Quiero reservar!</button></a>
             </div>
         </div>
 
         <br>
         <br>
         
+        <h2>Empresas que confian en Rosana Viajes</h2>
+
+        <div class="empresas">
+                <div><img src="/images/index/chevallier-logo.png" alt=""></div>
+                <div><img src="/images/index/puntodepartida.png" alt=""></div>
+                <div><img src="/images/index/travelar.png" alt=""></div>
+        </div>
+        
+        <br><br>
+        
+        <div class="bannerMate">
+            <p>Date la oportunidad de soñar</p>
+          </div>
+
     </body>
   
     <footer>

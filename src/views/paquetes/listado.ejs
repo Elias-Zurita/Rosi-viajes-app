@@ -7,24 +7,25 @@
   <header><%- include('../partials/header.ejs') %></header>
 
   <body>
-    <br />
-    <h1>NUESTROS PAQUETES</h1>
+    <div class="tituloSucursales" style="margin-top:100px">PAQUETES</div>
 
     <div class="listadoPadre">
       <% paquetes.forEach(paquete => { %>
-      <div class="cajaProducto">
-        <a href="/paquetes/detalle/<%= paquete.id %>">
-          <div class="cajaImagenProducto">
-            <img src="/images/paquetes/<%= paquete.Banner %>" />
-            <div class="textoConHover">
-              <div style="font-family: 'Teko', sans-serif">
-                MÁS INFO
+        <div class="cajaProducto">
+          <a href="/paquetes/detalle/<%= paquete.id %>">
+            <div class="cajaImagenProducto">
+              <img src="/images/paquetes/<%= paquete.Banner %>" />
+              <div class="textoConHover">
+                <div style="font-family: 'Teko', sans-serif">
+                  MÁS INFO
+                </div>
               </div>
             </div>
+          </a>
+          <div class="precioyReserva">
+            <div class="precioProducto">$ <%= paquete.Precio %></div>
+            <a href="https://wa.me/5491149141781?text=Hola,%20quiero%20reservar:%20 <%=paquete.Nombre %>" target="_blank"><button type="submit" class="addCart">Quiero reservar!</button></a>
           </div>
-        </a>
-        <div class="precioProducto">$ <%= paquete.Precio %></div>
-          <a href="https://wa.me/5491149141781?text=Hola,%20quiero%20reservar:%20 <%=paquete.Nombre %>" target="_blank"><button type="submit" class="addCart">Quiero reservar!</button></a>
         </div>
       <% }) %>
     </div>
@@ -60,7 +61,7 @@
       <div class="iconosIndex">
         <div class="cajaIconoIndex">
           <div class="face front">
-            <img src="images/index/icono_transporte.png" alt="">
+            <img src="../images/index/icono_transporte.png" alt="">
           </div>
           <div class="face back">
             <div class="nombreIconoIndex">Buses semi camas y camas</div>
@@ -68,7 +69,7 @@
         </div>
         <div class="cajaIconoIndex">
           <div class="face front">
-            <img src="images/index/icono_avion.png" alt="">
+            <img src="../images/index/icono_avion.png" alt="">
           </div>
           <div class="face back">
             <div class="nombreIconoIndex">Volá dentro y fuera del país</div>
@@ -76,7 +77,7 @@
         </div>
         <div class="cajaIconoIndex">
           <div class="face front">
-            <img src="images/index/icono_tarjeta.png" alt="">
+            <img src="../images/index/icono_tarjeta.png" alt="">
           </div>
           <div class="face back">
             <div class="nombreIconoIndex">Efectivo, transferencia o MP</div>
@@ -84,7 +85,7 @@
         </div>
         <div class="cajaIconoIndex">
           <div class="face front">
-            <img src="images/index/atencion.png" alt="">
+            <img src="../images/index/atencion.png" alt="">
           </div>
           <div class="face back">
             <div class="nombreIconoIndex">Atención personalizada</div>
